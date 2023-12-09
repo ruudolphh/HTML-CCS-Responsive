@@ -1,0 +1,152 @@
+body{
+	  background-color:rgba(255,249,239,1.00);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+	background-color: rgba(0, 0, 0, 0.27);
+	width: 100%;
+	height: 8%;	
+  position:fixed;
+  z-index: 1;
+}
+
+.header > i{
+    color: white;
+    font-size: 1.0vw;
+}
+
+.header-data {
+    background-color: black;
+	display: flex;
+	height: 100%;
+	width: 100%;
+}
+
+.header-data > a{
+	font-family: "HelveticaBlk";
+	color: white;
+	font-size: 15px;
+	
+	margin: auto;
+	text-decoration: none; /* Quita el subrayado de las palabras del menu*/
+}
+
+.header-data > a:hover{
+	background-color: rgba(255,255,255,0.2);
+	border-radius: 1em;
+}
+
+footer{
+  position:fixed;
+  background-color: rgba(0, 0, 0, 0.27);
+  height: 89px;
+  margin-top: 5vw;
+  bottom: 0;
+}
+
+.central-img {
+  display: flex; 
+  flex-wrap: wrap; 
+  padding-top: 300px;
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;
+}
+
+  .central-img > img {    
+    max-width: 300px;
+    height: auto;
+
+}
+
+.gallery {
+    display: flex; /* Los elementos dentro del elemento con esta clase se van a 
+    organizar en una fila de manera flaxible */
+    flex-wrap: wrap; /* Crea mas lineas cuando los elementos no tienen suficiente espacio en 
+    la pantalla */
+    justify-content: space-around; /* Distribuye uniformemente de manera orizontal y añade espacio entre ellos
+    y al contenedor */
+    padding: 20px;
+    padding-bottom: 89px;
+    padding-top: 89px;
+}
+
+  .gallery img {
+    
+    max-width: 300px;
+    height: auto;
+    border-radius: 70px;
+    box-shadow: -5px 10px 20px rgba(38, 157, 150, 0.5); /* Sombreado de las imagenes de la galeria
+    primer num: desplazamiento orizontal, segundo num: desplazamiento vertical, 
+    tercer num: tamaño de la sombra
+    Dentro del rgba: rgb es el color, (a) canal alpha= transparencia */
+    margin: 15px;
+    transition: transform 0.3s ease-in-out; /* Tiempo en que tarda en hacer la transicion*/
+  }
+
+  .gallery img:hover {
+    transform: scale(1.1);
+  }
+
+/* Tamaño en la galeria para los iconos de las redes sociales */
+.socialmedia {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-around; 
+  padding: 20px;
+  margin-bottom: 89px;
+}
+
+.socialmedia a i {
+  font-size: 500%; /* Tamaño deseado de los íconos */
+  max-width: 300px; /* Máximo ancho de los íconos */
+  height: auto;
+  border-radius: 70px;
+  box-shadow: -5px 10px 20px rgba(38, 157, 150, 0.5); /* Sombra de los íconos */
+  margin: 15px;
+  transition: transform 0.3s ease-in-out; /* Transición al hacer hover */
+  color: black;
+}
+
+.socialmedia a i:hover {
+  transform: scale(1.1); /* Efecto de escala al hacer hover */
+}
+
+.contacto {
+  font-size: 500%;
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-around; 
+  padding: 20px;
+  height: 500%;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+  .socialmedia {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .socialmedia a i {
+      font-size: 1000%; /* Tamaño más grande para dispositivos móviles */
+      max-width: 200px; /* Ancho máximo para dispositivos móviles */
+      margin: 20px 0; /* Espaciado entre íconos para dispositivos móviles */
+  }
+  body {
+    font-size: 14px; /* Reducir el tamaño de fuente para pantallas más pequeñas */
+  }
+  .contacto > p{
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .contacto {
+    font-size: 300%;
+    padding-top: 100px;
+  }
+}
